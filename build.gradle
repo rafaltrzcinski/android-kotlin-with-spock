@@ -1,18 +1,19 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
+        google()
+        maven { url 'http://oss.jfrog.org/oss-snapshot-local/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.2.0'
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath (group: 'org.codehaus.groovy', name: 'groovy-android-gradle-plugin', version: '2.0.0-20171107.143611-2', ext: 'jar')
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
